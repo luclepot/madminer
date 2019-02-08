@@ -686,7 +686,7 @@ def _untar_and_parse_lhe_file(filename):
     new_filename, extension = os.path.splitext(filename)
     if extension == ".gz":
         if not os.path.exists(new_filename):
-            call_command("gunzip -k {}".format(filename))
+            call_command("gunzip {}".format(filename))
         filename = new_filename
 
     # In some cases, the LHE comments can contain bad characters

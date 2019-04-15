@@ -1,6 +1,6 @@
 # MadMiner
 
-*Johann Brehmer, Felix Kling, Irina Espejo, and Kyle Cranmer*
+**Johann Brehmer, Felix Kling, Irina Espejo, and Kyle Cranmer**
 
 Mining gold from MadGraph to improve limit setting in particle physics.
 
@@ -10,12 +10,11 @@ contact us at [johann.brehmer@nyu.edu](johann.brehmer@nyu.edu).
 [![PyPI version](https://badge.fury.io/py/madminer.svg)](https://badge.fury.io/py/madminer)
 [![Documentation Status](https://readthedocs.org/projects/madminer/badge/?version=latest)](https://madminer.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.com/johannbrehmer/madminer.svg?branch=master)](https://travis-ci.com/johannbrehmer/madminer)
-[![Docker pulls](https://img.shields.io/docker/pulls/irinahub/docker-madminer.svg)](https://hub.docker.com/r/irinahub/docker-madminer)
+[![Docker pulls](https://img.shields.io/docker/pulls/madminertool/docker-madminer.svg)](https://cloud.docker.com/u/madminertool/repository/docker/madminertool/docker-madminer)
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/johannbrehmer/madminer/master)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1489147.svg)](https://doi.org/10.5281/zenodo.1489147)
-
 
 ## Introduction
 
@@ -73,9 +72,7 @@ with Geant4. In this case, the user has to implement code that runs the detector
 and stores the observables and weights in the HDF5 file. The `DelphesProcessor` and `LHEProcessor` classes might provide
 some guidance for this.
 
-We're currently working on a [reference Docker image](https://hub.docker.com/r/irinahub/docker-madminer-madgraph) that
-has all these dependencies and the needed patches installed.
-
+You can find here [DockerHub  madminertool](https://cloud.docker.com/u/madminertool/) the docker images for the lastest version of: the MadMiner library, the MadMiner physics section (MadGraph, Delphes, custom software dependencies and code for configuration, generation and Delphes processing deployment) and the MadMiner ML section (code for configuration, training and evaluation). Please email [iem244@nyu.edu]() for any inquiries about the Docker images.
 ### Install MadMiner
 
 To install the MadMiner package with all its Python dependencies, run `pip install madminer`.
@@ -118,11 +115,12 @@ The madminer API is documented on [readthedocs](https://madminer.readthedocs.io/
 
 ## Acknowledgements
 
-We are immensely grateful to all contributors and bug reporters! In particular, we would like to thank Alexander Held
-and Duccio Pappadopulo. We are grateful to Lukas Heinrich for his help with workflows and Docker containers.
+We are immensely grateful to all contributors and bug reporters! In particular, we would like to thank Zubair Bhatti,
+Alexander Held, and Duccio Pappadopulo. A big thanks to Lukas Heinrich for his help with workflows and Docker
+containers.
 
-The SCANDAL inference method is based on [Masked Autoregressive Flows](https://arxiv.org/abs/1705.07057), and its
-implementation is a pyTorch port of the original code by George Papamakarios et al. available at
+The SCANDAL inference method is based on [Masked Autoregressive Flows](https://arxiv.org/abs/1705.07057), and our
+implementation is a pyTorch port of the original code by George Papamakarios et al., which is available at
 [https://github.com/gpapamak/maf](https://github.com/gpapamak/maf).
 
 The [setup.py](setup.py) was adapted from
